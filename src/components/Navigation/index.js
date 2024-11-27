@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useContext, useRef, useState } from "react";
 import IconButton from "../IconButton";
 
 import "./Navigation.scss";
+import { PageContext } from "../../context/page";
+import MenuItem from "../IconButton/MenuItem";
 
 const ITEM_LIST = [
   { id: 0, title: "Khuyến mãi hot" },
@@ -13,24 +15,22 @@ const ITEM_LIST = [
   { id: 6, title: "Menu Item" },
   { id: 7, title: "Menu Item" },
   { id: 8, title: "Menu Item" },
-  { id: 9, title: "Menu Item" },
-  { id: 10, title: "Menu Item" },
-  { id: 11, title: "Menu Item" },
 ];
 
 function Navigation() {
-  const [activeItem, setActiveItem] = useState(ITEM_LIST[0].id);
-
-  console.log(activeItem);
+  const { page, setPage } = useContext(PageContext);
+  const ref = useRef();
 
   return (
-    <div className="navigation">
+    <div className="navigation" ref={ref}>
       {ITEM_LIST.map((item) => (
-        <IconButton
+        <MenuItem
           key={item.id}
-          title={item.title}
-          onClick={() => setActiveItem(item.id)}
-          active={activeItem === item.id}
+          title={`${item.title} ${item.id}`}
+          containerRef={ref}
+          id={item.id}
+          onClick={() => setPage(item.id)}
+          active={page === item.id}
         />
       ))}
     </div>

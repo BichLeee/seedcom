@@ -20,8 +20,10 @@ function IconButton({
 
   return (
     <button className={classes} onClick={onClick}>
-      <span>{icon}</span>
-      <div className="button-title">{title}</div>
+      <div className="inner">
+        <span>{icon}</span>
+        <div className="button-title">{title}</div>
+      </div>
     </button>
   );
 }

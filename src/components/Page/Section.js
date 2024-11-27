@@ -1,7 +1,7 @@
 function Section({ title, children }) {
   return (
     <>
-      <b className="section-title">{title}</b>
+      <div className="section-title">{title}</div>
       <div className="section-content">{children}</div>
     </>
   );
