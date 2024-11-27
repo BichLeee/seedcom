@@ -1,0 +1,21 @@
+.App {
+  text-align: center;
+  overflow-y: hidden;
+  height: 710px;
+}
+
+.page-content {
+  width: 287px;
+  min-height: 100vh;
+  margin-left: 88px;
+}
+
+.default-item {
+  &:hover {
+    color: #4a5568 !important;
+  }
+}
+
+.custom-page {
+  background-color: #e6f1ff !important;
+}

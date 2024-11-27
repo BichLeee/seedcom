@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.scss";
+import Navigation from "./components/Navigation";
+import Section from "./components/Page/Section";
+import IconButton from "./components/IconButton";
+import Page from "./components/Page";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navigation />
+      <main className="page-content">
+        <Page className="custom-page">
+          <Section title={"Theo chương trình khuyến mãi"}>
+            <IconButton title={"Menu Item"} active={false} onClick={() => {}} />
+            <IconButton title={"Menu Item"} active={false} onClick={() => {}} />
+            <IconButton title={"Menu Item"} active={false} onClick={() => {}} />
+            <IconButton title={"Menu Item"} active={false} onClick={() => {}} />
+          </Section>
+          <Section title={"Theo chương trình khuyến mãi"}>
+            <IconButton title={"Menu Item"} active={false} onClick={() => {}} />
+            <IconButton title={"Menu Item"} active={false} onClick={() => {}} />
+            <IconButton title={"Menu Item"} active={false} onClick={() => {}} />
+            <IconButton title={"Menu Item"} active={false} onClick={() => {}} />
+          </Section>
+          <Section title={"Theo chương trình khuyến mãi"}>
+            <IconButton title={"Menu Item"} active={false} onClick={() => {}} />
+            <IconButton title={"Menu Item"} active={false} onClick={() => {}} />
+            <IconButton title={"Menu Item"} active={false} onClick={() => {}} />
+            <IconButton title={"Menu Item"} active={false} onClick={() => {}} />
+          </Section>
+          <Section title={"Khuyến mãi nổi bật"}>
+            <IconButton title={"Menu Item"} active={false} onClick={() => {}} />
+            <IconButton title={"Menu Item"} active={false} onClick={() => {}} />
+          </Section>
+        </Page>
+      </main>
     </div>
   );
 }

@@ -1,0 +1,15 @@
+.navigation {
+  display: flex;
+  flex-direction: column;
+  width: 88px;
+  max-height: 100vh;
+
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  overflow-y: scroll;
+  scrollbar-width: 0px;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
